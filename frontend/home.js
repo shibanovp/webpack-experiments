@@ -1,6 +1,2 @@
 'use strict'
-
-import welcome from './welcome';
-
-welcome('home');
-exports.welcome = welcome;
+let old = require('imports?workSettings=>{delay:50}!old');
