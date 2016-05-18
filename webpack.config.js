@@ -4,9 +4,10 @@ const NODE_ENV = process.env.NODE_ENV || 'development';
 const webpack = require('webpack');
 
 module.exports = {
+    context: __dirname + '/frontend',
     entry: {
-        home: './frontend/home',
-        about: './frontend/about'
+        home: './home',
+        about: './about'
     },
     output: {
         path: __dirname + '/public',
@@ -19,8 +20,12 @@ module.exports = {
     },
     devtool: NODE_ENV === 'development' ? 'source-map': null,
     plugins: [
+        new webpack.NoErrorsPlugin(),
         new webpack.DefinePlugin({
             NODE_ENV: JSON.stringify(NODE_ENV),
+        }),
+        new webpack.optimize.CommonsChunkPlugin({
+            name: 'common'
         })
     ],
     module: {
