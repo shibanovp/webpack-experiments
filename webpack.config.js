@@ -17,7 +17,12 @@ module.exports = {
     plugins: [
         new webpack.DefinePlugin({
             NODE_ENV: JSON.stringify(NODE_ENV),
-            
         })
-    ]
+    ],
+    module: {
+        loaders: [{
+            test: /\.js$/,
+            loader: 'babel?presets[]=es2015'
+        }]
+    }
 }
