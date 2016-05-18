@@ -1,0 +1,22 @@
+{
+  "name": "webpack-experiments",
+  "version": "1.0.0",
+  "description": "",
+  "main": "home.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/unkindest/webpack-experiments.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/unkindest/webpack-experiments/issues"
+  },
+  "homepage": "https://github.com/unkindest/webpack-experiments#readme",
+  "devDependencies": {
+    "webpack": "^1.13.0"
+  }
+}
